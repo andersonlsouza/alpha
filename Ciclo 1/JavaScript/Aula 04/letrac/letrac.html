@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Cálculos matemáticos</title>
+</head>
+<body class="container-flex">
+    <div class="container-flex-column card" id="arredondador">
+        <h2 class="text-title">Arredondar números</h2>
+        <div class="container-flex-column">
+            <label for="num" class="default-text">Número</label>
+            <input type="text" name="num" id="num" class="input-style" placeholder="Insira um número">  
+        </div>
+
+        <input type="button" id="button3" value="Arredondar" class="button">
+
+        <div class="container-flex-column">
+            <p class="default-text">Resultado arredondado para cima</p>
+            <p id="resultado-arredondado-cima" class="result">...</p>
+            
+            <p class="default-text">Resultado arredondado para baixo</p>
+            <p id="resultado-arredondado-baixo" class="result">...</p>
+        </div>
+    </div>
+
+    <script src="letrac.js"></script>
+</body>
+</html>

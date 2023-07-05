@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Switch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container-flex">
+    <div class="container-flex-column card" id="large">
+        <h2 class="text-title">Cardápio</h2>
+
+        <div class="container-flex-column">
+            <p class="default-text">Opções</p>
+            <select name="selects" id="selects" class="input-style">
+                <option value="option0"></option>
+                <option value="option1">Bistca de porco</option>
+                <option value="option2">Picanha</option>
+                <option value="option3">Linguiça de boi</option>
+                <option value="option4">Fraldinha de boi</option>
+                <option value="option5">Coxa de frango</option>
+            </select>
+        </div>
+
+        <input type="button" value="Exibir" class="button" id="button">
+
+        <div class="container-flex-column" id="container-result">
+            <p class="default-text">Resultado</p>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script src="questao3.js"></script>
+</body>
+</html>
