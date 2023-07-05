@@ -1,0 +1,425 @@
+/* font-family: 'Libre Franklin', sans-serif;
+
+font-family: 'Poppins', sans-serif; */
+/* ==global configuration== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==declaring variables== */
+:root {
+    font-size: 10px;
+
+    --primary-color: #afe8ff;
+    --secondary-color: #fff;
+    --main-color: #ff743c;
+    --text-color: #000;
+}
+
+/* ==generic classes== */
+.container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    padding: .7rem 0 .5rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.text {
+    padding: .5rem 0;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+a {
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+a:hover {
+    text-decoration: underline var(--main-color) .15rem;
+    color: var(--main-color);
+}
+
+a:active {
+    color: var(--main-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mobile-hide {
+    display: none;
+}
+
+/* ==header== */
+#header {
+    background-color: var(--secondary-color);
+    border-bottom: hsla(0, 0%, 0%, 0.1) solid 1px;
+
+    position: fixed;
+    top: 0;
+
+    padding: 0.2rem 0;
+}
+
+#header div.container {
+    justify-content: space-between;
+}
+
+#header img {
+    scale: 30%;
+}
+
+#header figure a {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    background-image: url(../images/BrasaoSuzano.svg);
+    background-position: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#header nav {
+    gap: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+#header nav .fa-bars {
+    scale: 200%;
+}
+
+/* ==footer== */
+#back-to-top {
+    justify-content: flex-end;
+}
+
+#back-to-top div a {
+    display: inline-block;
+
+    height: 30px;
+    width: 30px;
+
+    background-image: url(../images/arrow-up-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+#footer {
+    padding: .5rem 5vw;
+    border-top: hsla(0, 0%, 0%, 0.1) solid 1px;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#footer #copyright {
+    display: inline-block;
+    width: 100%;
+}
+
+#footer a {
+    text-transform: capitalize;
+}
+
+#footer a:hover {
+    text-decoration: underline var(--text-color) .1rem;
+    color: var(--text-color);
+}
+
+/* ==contato== */
+
+/* Configurações da Main */
+
+#main {
+    margin-top: 83px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23afe8ff80' fill-opacity='1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 4%;
+}
+
+/* Container envolvendo os contatos e formulário */
+
+#general-content {
+    width: 100%;
+}
+
+
+/* Container dos contatos e localização */
+
+#container-contacts-map {
+    width: 100%;
+    padding: 5%;
+    background-color: var(--secondary-color);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+}
+
+#text-contact {
+    width: 100%;
+}
+
+#container-map {
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    border: 0;
+}
+
+/* Container dos formulários */
+
+#container-form {
+    width: 100%;
+    padding: 2rem 2rem;
+    margin: 10px 0;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+}
+
+#input-form > label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#city-and-state {
+    width: 100%;
+}
+
+#input-form input, #input-form select {
+    width: 100%;
+    height: 5rem;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+}
+
+#input-form textarea {
+    width: 100%;
+    height: 5rem;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+#input-form textarea:focus, #input-form input:focus, #input-form select:focus {
+    border: var(--main-color) solid 2px;
+    outline: none;
+} 
+
+/* Estilização do botão do formulário */
+
+#button {
+    padding: 6px 12px;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+#button:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* ==responsive design== */
+@media screen and (min-width: 810px) {
+    
+    /* ==generic classes== */
+    
+    :root {
+        font-size: 14px;
+    }
+
+    .mobile-hide {
+        display: inline;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .desktop-hide {
+        display: none;
+    }
+
+    /* ==header== */
+    #header {
+        padding: .5rem 0;
+    }
+
+    #header #search {
+        width: 15vw;
+        height: 2.2rem;
+        padding: .2rem;
+        background-image: url(../images/magnifying-glass-solid.svg);
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 95% 50%;
+
+        border-radius: 1rem;
+    }
+
+    /* ==footer== */
+    #footer #copyright {
+        display: inline;
+    }
+
+    #footer p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /* ==Main== */
+
+    /* Configurações da Main */
+    
+    #main {
+        margin-top: 117px;
+        min-height: calc(100vh - 170.8px);
+        justify-content: space-around;
+    }
+
+    /* Containers dos contatos e formulário */
+
+    #general-content {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: flex-start;
+        padding-bottom: 2%;
+    }
+
+    #container-contacts {
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        align-items: stretch;
+    }
+
+
+    /* Estilização dos contatos e localização */
+
+    #text-contact {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    #text-contact a {
+        font-size: 1rem;
+    }
+
+    #container-contacts-map {
+        width: 48%;
+        justify-content: space-between;
+        padding: 2%;
+    }
+
+    #container-map {
+        width: 100%;
+        flex: 1;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Estilização dos formulários */
+
+    #form-complete {
+        width: 48%;
+    }
+    #container-form {
+        width: 100%;
+        padding: 2rem 4rem;
+        margin: 0;
+        background-color: var(--secondary-color);
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #city-and-state {
+        width: 100%;
+        display: flex;
+    }
+
+    #city {
+        width: 80%;
+    }
+
+    #input-form {
+        width: 100%;
+        font-size: 1rem;
+    }
+    #input-form label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 2.5rem;
+    }
+
+    #input-form input{
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    #input-form select {
+        width: 100%;
+        height: 2.5rem;
+    }
+
+    #input-form textarea {
+        width: 100%;
+        height: 5rem;
+    }
+}

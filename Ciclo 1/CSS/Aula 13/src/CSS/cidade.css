@@ -1,0 +1,401 @@
+/* font-family: 'Libre Franklin', sans-serif;
+
+font-family: 'Poppins', sans-serif; */
+/* ==global configuration== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ==declaring variables== */
+:root {
+    font-size: 10px;
+
+    --primary-color: #afe8ff;
+    --secondary-color: #fff;
+    --main-color: #ff743c;
+    --text-color: #000;
+}
+
+/* ==generic classes== */
+.container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    padding: .7rem 0 .5rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.text {
+    padding: .5rem 0;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+a {
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+a:hover {
+    text-decoration: underline var(--main-color) .15rem;
+    color: var(--main-color);
+}
+
+a:active {
+    color: var(--main-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.mobile-hide {
+    display: none;
+}
+
+/* ==header== */
+#header {
+    background-color: var(--secondary-color);
+    border-bottom: hsla(0, 0%, 0%, 0.1) solid 1px;
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    padding: 0.2rem 0;
+}
+
+
+header{
+    width: 100%;
+}
+
+#header div.container {
+    justify-content: space-between;
+}
+
+#header img {
+    scale: 30%;
+}
+
+#header figure a {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    background-image: url(../images/BrasaoSuzano.svg);
+    background-position: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#header nav {
+    gap: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+#header nav .fa-bars {
+    scale: 200%;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+     MAIN MOBILE
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+#suzano{
+    margin-top: 8rem;
+    background-color: var(--primary-color);
+}
+
+.wave-bottom{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wave-top{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translateY(0.5rem);
+}
+
+
+
+.section-impar{
+    background-color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.section-par{
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+.resume-list{
+    text-align: left;
+    padding-left: 0.5rem;
+    background-color: var(--primary-color);
+}
+
+.resume-list li{
+    margin-left: 3.0rem;
+}
+
+.subtitle-cidade{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+.legend-image{
+    font-size: 1.1rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.image-landscape{
+    margin-top: 0.2rem;
+    max-width: 60rem;
+    width:80vw;
+}
+
+.image-portrait{
+    margin-top: 0.2rem;
+    height: 30rem;
+}
+figcaption{
+    margin-bottom: 0.2rem;
+}
+.container-tables{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+table{
+    border: 0.2rem solid var(--main-color) ;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin:1rem;
+    font-size: 1.3rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+}
+table tr{
+    padding: 0px;
+}
+table tr th{
+    background-color: var(--main-color);
+}
+td{
+    width: 50%;
+    padding: 0.2rem;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+    FOOTER MOBILE
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+
+#back-to-top {
+    justify-content: flex-end;
+}
+
+#back-to-top div a {
+    display: inline-block;
+
+    height: 30px;
+    width: 30px;
+
+    background-image: url(../images/arrow-up-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    animation: arrow_move 1s ease-in-out alternate infinite;
+}
+/*ANIMATION TO BOTTOM PAGE ARROW*/
+@keyframes arrow_move{
+    0%{
+        transform: translateY(0rem);
+    }
+    100%{
+  
+        transform: translateY(-1rem);
+    }
+
+}
+
+#footer {
+    padding: .5rem 5vw;
+}
+
+#footer p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#footer #copyright {
+    display: inline-block;
+    width: 100%;
+}
+
+#footer a {
+    text-transform: capitalize;
+}
+
+#footer a:hover {
+    text-decoration: underline var(--text-color) .1rem;
+    color: var(--text-color);
+}
+
+.footer-img {
+    background-size: contain;
+}
+
+/* ==responsive design== */
+@media screen and (min-width: 810px) {
+    
+    /* ==generic classes== */
+    
+    :root{
+        font-size: 14px;
+    }
+
+/*
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .text {
+        line-height: 2.2rem;
+        font-size: 1.8rem;
+    }
+    */
+
+    .mobile-hide {
+        display: inline;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .desktop-hide {
+        display: none;
+    }
+/*
+    a {
+        font-size: 1.5rem;
+    }
+    */
+
+    /* ==header== */
+    #header {
+        padding: .5rem 0;
+    }
+/*
+    #header a {
+        font-size: 1.8rem;
+    }
+*/
+    #header #search {
+        width: 15vw;
+        height: 2.2rem;
+        padding: .2rem;
+
+        background-image: url(../images/magnifying-glass-solid.svg);
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 95% 50%;
+
+        border-radius: 1rem;
+    }
+
+
+    /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+    STYLING MAIN DESKTOP
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+    #suzano{
+       text-align: center;
+        margin-top: 8rem;
+    }
+
+  
+    .resume-list{
+        text-align: left;
+    }
+    .subtitle-cidade{
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        
+    }
+/*LOOOOK HEEEEEEEEEEEEEEREEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+    .link-text-history{
+        font-size: 1.3rem ;
+    }
+    .legend-image{
+        font-size: 1.3rem;
+    }
+    
+    .container-tables{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    table{
+        font-size: 1.3rem;
+    }
+
+
+    /* ==footer== */
+    #footer #copyright {
+        display: inline;
+    }
+
+    #footer p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+  
+    .footer-img {
+        background-image: url(../images/layered-waves-haikei.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+}
