@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    container_name: meu-postgres-aula06
+    environment:
+      - POSTGRES_USER=anderson
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=meubanco
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend-web:
+    container_name: backend-aula06
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - PGHOST=db
+      - PGPORT=5432
+      - PGUSER=anderson
+      - PGPASSWORD=123
+      - PGDATABASE=meubanco
+    ports:
+      - 8080:8080
+
+volumes:
+  postgres_data:
