@@ -10,6 +10,7 @@ app.use("/", express.static("public"));
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
+const username = [];
 let users = [];
 
 function broadcast(data) {
@@ -18,8 +19,12 @@ function broadcast(data) {
   });
 }
 
-wss.on("connection", () => {
-  broadcast({ type: "playerEntered", message: "Jogador 1 entrou" })
+wss.on("connection", (ws) => {
+  // console.log(ws);
+  ws.on("message", (mensage) => {
+    broadcast({ type: "playerEntered", message: "Jogador 1 entrou" })
+  });
+  // ws.onmessage = () => {}
 })
 
 server.listen(3000, () => {

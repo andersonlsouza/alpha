@@ -192,9 +192,7 @@ enterButton.addEventListener("click", () => {
 
   gameContainer.style.display = "block";
 
-  ws.onopen = function (e) {
-    console.log("Connection established");
-  };
+  ws.send("Connection established");
 });
 
 addQuestionButton.addEventListener("click", () => {
@@ -210,8 +208,10 @@ addQuestionButton.addEventListener("click", () => {
       yes: countYes,
       no: countNo
     },
-    () => countYes++,
-    () => countNo++
+    // () => countYes++,
+    () => console.log("yes"),
+    // () => countNo++
+    () => console.log("no")
   );
 })
 
