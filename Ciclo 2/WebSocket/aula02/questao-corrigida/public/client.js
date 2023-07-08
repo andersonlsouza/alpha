@@ -178,40 +178,75 @@ function updateVoteCountUI(update) {
 }
 
 const username = [];
-let idQuestion = 0;
 
-enterButton.addEventListener("click", () => {
-  if (username.find(element => element === usernameInput.value)) {
-    alert("Usuário já cadastrado!");
-    return;
+function responseObj(type, message) {
+  return JSON.stringify({ type, message })
+}
+
+ws.onmessage = function (event) {
+  const msg = JSON.parse(event.data);
+  const msgData = msg.message;
+
+  if (msg.type === "newUser") {
+    if (!msgData) {
+      alert("Usuário já cadastrado!");
+      return;
+    }
+
+    enterButton.disabled = true;
+    usernameInput.disabled = true;
+    gameContainer.style.display = "block";
+
+    msgData.forEach(question => {
+      addQuestionToUI(
+        question,
+        () => ws.send(responseObj("count", { questionId: question.id, answer: "yes" })),
+        () => ws.send(responseObj("count", { questionId: question.id, answer: "no" }))
+      )
+    });
   }
 
-  username.push(usernameInput.value);
-  enterButton.disabled = true;
-  usernameInput.disabled = true;
+  if (msg.type === "createdQuestion") {
+    const question = {
+      id: Number(msgData.id),
+      author: msgData.author,
+      text: msgData.text,
+      yes: msgData.yes,
+      no: msgData.no
+    }
 
-  gameContainer.style.display = "block";
+    addQuestionToUI(
+      question,
+      () => ws.send(responseObj("count", { questionId: question.id, answer: "yes" })),
+      () => ws.send(responseObj("count", { questionId: question.id, answer: "no" })),
+    );
+  }
 
-  ws.send("Connection established");
+  if (msg.type === "count") {
+    const updateCount = {
+      questionId: msgData.questionId,
+      answer: msgData.answer,
+      count: msgData.count
+    }
+
+    updateVoteCountUI(updateCount);
+  }
+};
+
+enterButton.addEventListener("click", () => {
+  ws.send(
+    responseObj("newUser", usernameInput.value)
+  );
 });
 
 addQuestionButton.addEventListener("click", () => {
-  idQuestion++;
-  let countYes = 0;
-  let countNo = 0;
+  const newQuestion = {
+    author: usernameInput.value,
+    text: newQuestionInput.value,
+  }
 
-  addQuestionToUI(
-    {
-      id: idQuestion,
-      author: usernameInput.value,
-      text: newQuestionInput.value,
-      yes: countYes,
-      no: countNo
-    },
-    // () => countYes++,
-    () => console.log("yes"),
-    // () => countNo++
-    () => console.log("no")
+  ws.send(
+    responseObj("newQuestion", newQuestion)
   );
 })
 
