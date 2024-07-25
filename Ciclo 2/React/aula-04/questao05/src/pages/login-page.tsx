@@ -1,3 +1,5 @@
+import "./login-page.css";
+
 import { useState } from "react";
 import { Form } from "../components/Form";
 import { Modal } from "../components/Modal";
@@ -14,12 +16,14 @@ export function LoginPage() {
   }
 
   return (
-    <>
+    <div className="box-form-background">
+      <div className="box-form">
+        <h1>Login</h1>
+        <Form onSubmit={formSubmitted} />
+      </div>
       {modalIsOpen && (
-        <Modal onClose={closeModal}>{"Form enviado com sucesso !"}</Modal>
+        <Modal onClose={closeModal}>{"Formulário enviado com sucesso !"}</Modal>
       )}
-      <h1>Login</h1>
-      <Form onSubmit={formSubmitted} />
-    </>
+    </div>
   );
 }

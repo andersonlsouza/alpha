@@ -1,4 +1,5 @@
 import "./Modal.css";
+import React from 'react';
 
 interface PropTypes {
   children: string;

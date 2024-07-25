@@ -1,3 +1,5 @@
+import "./Form.css";
+
 interface PropTypes {
   onSubmit: (event: React.MouseEvent) => void;
 }
