@@ -13,9 +13,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "jest": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +61,13 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
-    }
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,ts,jsx,tsx}",
+      "!<rootDir>/**/setupTests.ts",
+      "!<rootDir>/**/react-app-env.d.ts",
+      "!<rootDir>/**/App.tsx",
+      "!<rootDir>/**/index.tsx"
+    ]
   }
 }
