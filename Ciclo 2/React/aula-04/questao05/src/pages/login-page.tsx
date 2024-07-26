@@ -15,15 +15,27 @@ export function LoginPage() {
     setModalIsOpen(false);
   }
 
-  return (
-    <div className="box-form-background">
+  function renderForm() {
+    return (
       <div className="box-form">
         <h1>Login</h1>
         <Form onSubmit={formSubmitted} />
       </div>
-      {modalIsOpen && (
-        <Modal onClose={closeModal}>{"Formulário enviado com sucesso !"}</Modal>
-      )}
+    )    
+  }
+
+  function renderModal () {
+    if (!modalIsOpen) return;
+
+    return (
+      <Modal onClose={closeModal}>{"Formulário enviado com sucesso !"}</Modal>
+    );
+  }
+
+  return (
+    <div className="box-form-background">
+      {renderForm()}
+      {renderModal()}
     </div>
   );
 }
