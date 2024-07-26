@@ -1,0 +1,181 @@
+/* Posição dos personagens */
+
+body {
+    display: flex;
+    height: 93vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 15px #0d2bd7;
+    border-style: dashed;
+}
+
+/* Packman */
+
+@keyframes mouth-pacman {
+    0% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+
+    25% {
+        clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+
+    50% {
+        clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+
+    75% {
+        clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+
+    100% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+}
+
+.pacman:hover .pacman-mouth {
+    animation: mouth-pacman 0.3s infinite;
+}
+
+.pacman {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #f2d648;
+    position: relative;
+    margin: 20px;
+}
+
+.pacman-eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 40px;
+    left: 60px;
+    background: #000;
+}
+
+.pacman-mouth {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+}
+
+/* --Fanstasmas-- */
+
+/* Estilo geral */
+
+@keyframes disappear {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+.ghost:hover {
+    animation: disappear 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /* animation-play-state: paused; */
+}
+
+.ghost {
+    height: 200px;
+    margin: 25px;
+    position: relative;
+    width: 200px;
+}
+
+/* Estilo cabeça */
+
+.ghost .head {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    height: 100px;
+    position: relative;
+    width: 152px;
+}
+
+.blink .head {
+    background: red;
+}
+
+.pink .head {
+    background: pink;
+}
+
+.ink .head {
+    background: cyan;
+}
+
+.clyde .head {
+    background: orange;
+}
+
+/* Estilo dos olhos */
+
+.ghost .eye,.ghost .eyeBack {
+    position: relative;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+
+.ghost .eyeBack {
+    background: #FFF;
+    height: 50px;
+    width: 50px;
+}
+
+.ghost .eyeBack:first-child {
+    float: left;
+    margin: 50px 0 0 25px;
+}
+
+.ghost .eyeBack:last-child {
+    float: right;
+    margin: 50px 25px 0 0;
+}
+
+.ghost .eye {
+    background: #0d2bd7;
+    height: 25px;
+    margin:10%;
+    width: 25px;
+}
+
+/* Estilo para pernas */
+
+.ghost .legs {
+    border-bottom: 40px solid transparent;
+    display: block;
+    float: left;
+    height: 40px;
+    width: 0;
+}
+
+.blink .legs {
+    border-right: 38px solid red;
+    border-left: 38px solid red;
+}
+
+.pink .legs {
+    border-right: 38px solid pink;
+    border-left: 38px solid pink;
+}
+
+.ink .legs {
+    border-right: 38px solid cyan;
+    border-left: 38px solid cyan;
+}
+
+.clyde .legs {
+    border-right: 38px solid orange;
+    border-left: 38px solid orange;
+}

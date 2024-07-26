@@ -1,0 +1,68 @@
+:root {
+    --color1: #b67c11;
+}
+
+html {
+    background-color: #b67c1160;
+}
+
+html, body {
+    /* height: 100%; */
+    margin: 10px 10px;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#car-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-image: url("https://i.pinimg.com/originals/4e/d1/e3/4ed1e3825bdf2c78391e46eb6e59c19f.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    border: 3px solid var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-position: bottom; */
+    /* margin: 0 10px; */
+    /* padding: 0 10px; */
+}
+
+img {
+    height: 100%;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item {
+    font-weight: bold;
+    text-align: center;
+}
+
+.descipton-value {
+    background-color: var(--color1);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#car-names {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+#selections {
+    height: 30px;
+    font-weight: bold;
+    background-color: var(--color1);
+    color: white;
+    border: 2px solid var(--color1);
+    border-radius: 5px;
+}

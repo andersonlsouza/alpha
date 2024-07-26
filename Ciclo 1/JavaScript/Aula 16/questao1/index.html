@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de moedas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body class="container-flex-column">
+
+    <div class="card">
+        <p>Moeda</p>
+        <select id="coins">
+            <option value="USD">Dólar Americano ($)</option>
+            <option value="AED">Dirham Emirados Árabes (DH)</option>
+            <option value="EUR">Euro (€)</option>
+            <option value="ARS">Peso Argentino ($)</option>
+            <option value="CNY">Yuan (¥)</option>
+        </select>
+
+        <p>Data de início</p>
+        <input type="date" id="date-start">
+
+        <p>Data de fim</p>
+        <input type="date" id="date-end">
+    </div>
+    
+    <small id="error"></small>
+    
+    <button>Realizar cotação</button>
+
+    <div id="countainer-table">
+        <table class="text"></table>
+    </div>
+</body>
+</html>

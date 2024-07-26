@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#message-panel {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+#message-panel p {
+  margin: 0;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+#bet-box {
+  display: none;
+}
+
+#number-bet {
+  width: 100px;
+}
+
+button {
+  margin-top: 10px;
+}

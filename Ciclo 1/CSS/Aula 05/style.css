@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+    border: 3px solid rgb(206, 24, 24);
+}
+
+/* Menu principal */
+/* Não consegui centralizar direito na vertical os itens, fui colocando valores fixos na imagem do contato */
+nav {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul li {
+    display: inline-block;
+}
+
+a, h2 {
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul a:hover {
+    color: rgb(206, 24, 24);
+    background-color: white;
+}
+
+#logo {
+    float: left;
+}
+
+#usuario {
+    float:right;
+}
+
+#contato {
+    padding: 10px;
+}
+
+#capa {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    display: block;
+    padding: 0px;
+}
+
+/* Sessão de filmes e séries */
+/* Eu queria deixar a imagem com borda quando passasse o mouse e não consegui usar muito bem o float aqui */
+section figure a { 
+    padding: 0px;
+}
+
+section figure {
+    text-align: center;
+    display: inline-block;
+}
+
+figure img {
+    height: 375px;
+    width: 277.5px;
+    margin: 15px;
+}
+
+figure a:hover {
+    background-color: red;
+}
+
+h2 {
+    display: block;
+}
+
+.filmes, .series {
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+    background-color: rgb(206, 24, 24);
+    padding: 5px;
+    font-size: 20px;
+}

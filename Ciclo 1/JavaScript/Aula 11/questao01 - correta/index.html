@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body class="container-flex">
+    <form class="container-flex-column card">
+        
+        <div class="container-flex-column">
+            <label for="product">Produto</label>
+            <input type="text" id="product" placeholder="Produto" autocomplete="off">
+            <div id="erroProduct" class="textError"></div>
+        </div>
+        
+        <div class="container-flex-column">
+            <label for="description">Descrição</label>
+            <input type="text" id="description" placeholder="Descrição" autocomplete="off">
+            <div id="erroDescription" class="textError"></div>
+        </div>
+        
+        <div class="container-flex-column">
+            <label for="price">Preço</label>
+            <input type="number" id="price" placeholder="Valor" autocomplete="off" min="0">
+            <div id="erroPrice" class="textError"></div>
+        </div>
+        
+        <input type="button" value="Incluir produto" id="buttonInclude" class="button">
+        
+        <input type="button" value="Listar produtos" id="buttonList" class="button">
+        
+        <div class="container-flex-column">
+            <label for="price">Pesquisa</label>
+            <input type="text" id="search" placeholder="Nome/descrição de um produto" autocomplete="off">
+        </div>
+
+        <input type="button" value="Buscar" id="buttonSearch" class="button">
+        
+        <div id="result" class="result"></div>
+        
+    </form>
+
+    <div id="countainer-table" class="card">
+        <table class="text">
+            <thead>
+                <tr>
+                    <th colspan="5">Produtos</th></tr>
+                <tr>
+                    <th>ID</th>
+                    <th><span id="nameProducts">Produto</span></th>
+                    <th><span id="valueProducts">Valor (R$)</span></th>
+                    <th>Editar</th>
+                    <th>Apagar</th>
+                </tr>
+            </thead>
+            <tbody id="tableElements"></tbody>
+        </table>
+        <div id="resultSearch"></div>
+    </div>
+    
+</body>
+</html>

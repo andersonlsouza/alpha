@@ -1,0 +1,134 @@
+/* Posição dos personagens */
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 15px #0d2bd7;
+    border-style: dashed;
+}
+
+/* Packman */
+
+.pacman { 
+    width: 80px;
+    margin: auto;
+    position: relative;
+}
+
+.pacman .head {
+    border: 100px solid yellow;
+    border-radius: 100px;
+    border-right: 100px solid transparent;
+}
+
+.pacman .eye {
+    height: 25px;
+    width: 25px;
+    background: black;
+    border-radius: 100%;
+    position: relative;
+    top: -150px;
+    left: 50px;
+}
+
+/* --Fanstasmas-- */
+
+/* Estilo geral */
+
+.ghost {
+    height: 200px;
+    margin: 25px;
+    position: relative;
+    width: 200px;
+}
+
+/* Estilo cabeça */
+
+.ghost .head {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    height: 100px;
+    position: relative;
+    width: 152px;
+}
+
+.blink .head {
+    background: red;
+}
+
+.pink .head {
+    background: pink;
+}
+
+.ink .head {
+    background: cyan;
+}
+
+.clyde .head {
+    background: orange;
+}
+
+/* Estilo dos olhos */
+
+.ghost .eye,.ghost .eyeBack {
+    position: relative;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+}
+
+.ghost .eyeBack {
+    background: #FFF;
+    height: 50px;
+    width: 50px;
+}
+
+.ghost .eyeBack:first-child {
+    float: left;
+    margin: 50px 0 0 25px;
+}
+
+.ghost .eyeBack:last-child {
+    float: right;
+    margin: 50px 25px 0 0;
+}
+
+.ghost .eye {
+    background: #0d2bd7;
+    height: 25px;
+    margin:10%;
+    width: 25px;
+}
+
+/* Estilo para pernas */
+
+.ghost .legs {
+    border-bottom: 40px solid transparent;
+    display: block;
+    float: left;
+    height: 40px;
+    width: 0;
+}
+
+.blink .legs {
+    border-right: 38px solid red;
+    border-left: 38px solid red;
+}
+
+.pink .legs {
+    border-right: 38px solid pink;
+    border-left: 38px solid pink;
+}
+
+.ink .legs {
+    border-right: 38px solid cyan;
+    border-left: 38px solid cyan;
+}
+
+.clyde .legs {
+    border-right: 38px solid orange;
+    border-left: 38px solid orange;
+}

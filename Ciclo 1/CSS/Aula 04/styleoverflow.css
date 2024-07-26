@@ -1,0 +1,77 @@
+/* Questão 6 */
+
+* {
+    box-sizing: border-box;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0pt;
+    background-color: rgb(37, 37, 29);
+    font-family: Verdana;
+    display: flex;
+    justify-content: space-evenly;    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 10vw;
+}
+
+nav ul li a:hover {
+    background-color: rgb(24, 139, 233);
+}
+
+/* Questão 7 */
+h1 {
+    font-weight: bold;
+}
+
+main {
+    position: relative;
+}
+
+#one {
+    height: 150px;
+    width: 21.25%;
+    margin: 0 3%;
+    position: absolute;
+    left: 0px;
+    overflow: scroll;
+    background-color: green;
+}
+
+#two {
+    height: 150px;
+    width: 21.25%;
+    margin: 0 3%;
+    position: absolute;
+    left: 25%;
+    top: 0px;
+    overflow: hidden;
+    background-color: burlywood;
+}
+
+#tree {
+    height: 150px;
+    width: 21.25%;
+    margin: 0 3%;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    overflow: auto;
+    background-color: blue;
+}
+
+#four {
+    height: 150px;
+    width: 21.25%;
+    margin: 0 3%;
+    position: absolute;
+    left: 75%;
+    top: 0px;
+    overflow: visible;
+    background-color: green;
+}
